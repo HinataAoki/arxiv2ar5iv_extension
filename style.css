@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Muli");
+
+*{
+  box-sizing: border-box;
+  margin: auto;
+  font-family: "Muli", sans-serif;
+  color: #fff;
+}
+
+h1{
+  grid-area: header;
+  text-align: center;
+}
+
+button{
+  width: 1fr;
+  padding: 10px;
+  margin: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #666;
+  border-radius: 10px;
+}
+
+input{
+  grid-area: result;
+  width: 95%;
+  height: 40px;
+  padding: 8px;
+  font-size: 18px;
+  color: #555;
+}
+
+body{
+  --height: 60px;
+  display: grid;
+  grid-template-areas: "header header header"
+    "ttlBtn ttlBtn ttlBtn"
+    "urlBtn urlBtn urlBtn"
+    "markBtn markBtn markBtn"
+    "result result copyBtn"
+    "...... msg msg"
+    "notice notice notice";
+  grid-template-rows: var(--height) var(--height) var(--height) var(--height) var(--height) 10px 20px;
+  grid-template-columns: 1fr 75px 50px;
+  width: 400px;
+  padding: 8px;
+  background: #333;
+}
+
+button.copy{
+  grid-area: copyBtn;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  font-size: 24px;
+  border-radius: 20px;
+}
+
+button.ttl{
+  grid-area: ttlBtn;
+}
+
+button.url{
+  grid-area: urlBtn;
+}
+
+button.bmark{
+  grid-area: markBtn;
+}
+
+p{
+  z-index: 2;
+  grid-area: notice;
+  width: max-content;
+  text-align: right;
+}
+
+div.msg{
+  z-index: 300;
+  display: none;
+  grid-area: msg;
+  width: 100px;
+  height: 30px;
+  padding: 4px 18px;
+  margin-right: 0;
+  font-size: 18px;
+  background: #eee;
+  border-radius: 15px;
+}
+
+p.copied, p.failed{
+  position: absolute;
+  z-index: 350;
+  display: none;
+  grid-area: unset;
+  color: #333;
+}

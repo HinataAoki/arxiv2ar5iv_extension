@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Arxiv2Ar5iv",
+  "version": "1.0",
+  "description": "Convert arxiv url to ar5iv url",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "author": "Hinata Aoki",
+  "permissions": [
+    "tabs"
+  ],
+  "action": {
+    "default_title": "Arxiv2Ar5iv",
+    "default_popup": "index.html"
+  }
+}
